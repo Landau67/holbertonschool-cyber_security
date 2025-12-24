@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo netstat -pntu
+sudo netstat -plntu
