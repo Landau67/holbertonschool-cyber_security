@@ -1,2 +1,2 @@
 #!/bin/bash
-whois "$1" | awk -F: '/^(Registrant|Admin|Tech)/ { gsub(/\r/, ""); key=$1; val=substr($0, index($0, ":")+1); gsub(/^ */, "", val); if (key ~ /Ext/) key = key ":"; print key ", " val }'
+whois "$1" | awk -F: '/^Registrant|^Admin|^Tech/ {if ($1 ~ /Ext/) $1=$1":"; if ($2=="") $2=" "; print $1 "," $2}' > "${1}.csv"
