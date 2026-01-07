@@ -1,1 +1,1 @@
-icmp.type == 0 or ip.len == 28
+icmp.type == 0 or icmp.type == 8
