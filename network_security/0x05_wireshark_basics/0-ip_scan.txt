@@ -1,1 +1,1 @@
-ip.len ==20
+ip.proto == 1
