@@ -1,1 +1,1 @@
-a999d7337bf2276f1397331953e96cbb
+;wget https://github.com/yunchih/static-binaries/raw/master/nc
