@@ -1,1 +1,1 @@
-http://web0x04.hbtn/wp-includes/js/dist/vendor/wp-polyfill-importmap.min.js
+https://seantheme.com/hud/
