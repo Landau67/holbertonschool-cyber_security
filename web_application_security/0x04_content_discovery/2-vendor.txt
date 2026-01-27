@@ -1,0 +1,1 @@
+https://cod.hbtn.io/static/assets/js/vendor.min.js
