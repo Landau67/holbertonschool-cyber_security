@@ -1,2 +1,2 @@
 #!/bin/bash
-getstatus
+sestatus
