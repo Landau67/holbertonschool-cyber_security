@@ -1,2 +1,2 @@
 #!/bin/bash
-nmap -sN -p20-25 $1
+nmap -sN -p 20-25 "$1"
