@@ -40,7 +40,6 @@ def main():
         # Pad with null bytes if replacement string is shorter
         padded_replace = replace_string.ljust(len(search_string), b'\x00')
         mem_file.write(padded_replace)
-        print("String replaced successfully!")
 
 # This stops the code from running when the checker imports it!
 if __name__ == "__main__":
