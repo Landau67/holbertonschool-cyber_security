@@ -4,7 +4,9 @@ This script locates and replaces a string in the heap of a running process.
 """
 import sys
 
+
 def main():
+    """Main execution block"""
     # Basic check to ensure the user provides exactly 3 arguments
     if len(sys.argv) != 4:
         print("Usage: read_write_heap.py pid search_string replace_string")
@@ -29,18 +31,18 @@ def main():
     with open(f"/proc/{pid}/mem", 'r+b') as mem_file:
         mem_file.seek(heap_start)
         heap_data = mem_file.read(heap_end - heap_start)
-        
+
         offset = heap_data.find(search_string)
         if offset == -1:
             print("Error: String not found in heap.")
             sys.exit(1)
-            
+
         mem_file.seek(heap_start + offset)
-        
+
         # Pad with null bytes if replacement string is shorter
         padded_replace = replace_string.ljust(len(search_string), b'\x00')
         mem_file.write(padded_replace)
 
-# This stops the code from running when the checker imports it!
+
 if __name__ == "__main__":
     main()
