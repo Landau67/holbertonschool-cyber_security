@@ -1,2 +1,2 @@
 #!/bin/bash
-nmap --script banner default ssl-enum-ciphers smb-enum* $1 -oN service_enumeration_results.txt
+nmap -A --script banner default ssl-enum-ciphers smb-enum-domains $1 -oN service_enumeration_results.txt
