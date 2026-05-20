@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-#!/usr/bin/env ruby
 require 'optparse'
 
 TASKS_FILE = 'tasks.txt'
@@ -21,6 +20,7 @@ end
 
 def list_tasks
   tasks = load_tasks
+  puts "Tasks:"
   tasks.each_with_index { |task, i| puts "#{i + 1}. #{task}" }
 end
 
