@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 require 'net/http'
 require 'json'
 
@@ -12,7 +11,9 @@ def post_request(url, body_params = {})
 
   response = http.request(request)
 
+  parsed = JSON.parse(response.body)
+
   puts "Response status: #{response.code} #{response.message}"
   puts "Response body:"
-  puts JSON.pretty_generate(JSON.parse(response.body))
+  puts JSON.pretty_generate(parsed)
 end
